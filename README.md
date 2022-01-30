@@ -21,3 +21,10 @@ Design pattern and click save button
 After clicking save button you will see new pattern (Scriptable Object) at "Assets/Patterns" folder
 
 ![image](https://user-images.githubusercontent.com/75855560/151671988-f6c33b4a-2645-4a39-ad93-58d2e181c1a3.png)
+
+<strong>Example usage PatternSO</storng>
+```c#
+public PatternSO asset;
+bool[,] pattern = asset.getPattern(); // Returns bool[,]
+```
+ 
