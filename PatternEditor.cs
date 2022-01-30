@@ -22,8 +22,8 @@ public class PatternEditor : EditorWindow
         lenY = EditorGUILayout.IntField(lenY, GUILayout.Width(50));
         GUILayout.EndHorizontal();
 
-        if(pattern == null) pattern = new bool[lenX,lenY];
-        if(pattern.Length != lenX * lenY) pattern = new bool[lenX,lenY];
+        if(pattern == null) pattern = new bool[lenX, lenY];
+        if(pattern.Length != lenX * lenY) pattern = new bool[lenX, lenY];
 
         for(int y = 0; y < lenY; y++){
             GUILayout.BeginHorizontal();
@@ -41,10 +41,11 @@ public class PatternEditor : EditorWindow
             }
             
             PatternSO asset = ScriptableObject.CreateInstance<PatternSO>();
-            asset.pattern = pattern;
+            asset.setPattern(pattern);
 
             AssetDatabase.CreateAsset(asset, path+"/new pattern.asset");
             AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
             
             EditorUtility.FocusProjectWindow();
 
