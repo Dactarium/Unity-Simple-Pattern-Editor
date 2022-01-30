@@ -11,7 +11,7 @@ public class PatternSO : ScriptableObject
         lenY = _pattern.GetLength(1);
         for(int y = 0; y < lenY; y++){
             for(int x = 0; x < lenX; x++){
-                pattern[y * lenX + x] = _pattern[x, y];
+                pattern[y * lenX + x] = _pattern[x, y] == true;
             }
         }
     }
