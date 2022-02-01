@@ -3,7 +3,7 @@
 ## Getting Started
 
 add PatternEditor.cs to Unity's "Assets/Editor" Folder
-add PatternConverter.cs to Unity's "Assets" Folder
+<br/>add PatternConverter.cs to Unity's "Assets" Folder
 
 ## Creating new pattern
 
