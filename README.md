@@ -2,7 +2,8 @@
 
 ## Getting Started
 
-add PatternEditor.cs to Unity's "Assets" Folder
+add PatternEditor.cs to Unity's "Assets/Editor" Folder
+add PatternConverter.cs to Unity's "Assets" Folder
 
 ## Creating new pattern
 
@@ -38,7 +39,7 @@ Click <strong>Save Patern</strong> button
 ## Example usage in Script (Bool Pattern Json)
 ```c#
 public TextAsset json;
-public bool[,] pattern = PatternEditor.dataToPattern<bool>(json.text);
+public bool[,] pattern = PatternConverter.convert<bool>(json.text);
 ```
 
 ## Supported Data Types

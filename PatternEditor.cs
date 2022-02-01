@@ -12,7 +12,7 @@ enum AreaSelection{
     New,
     Edit
 }
-public class PatternEditor : EditorWindow
+public class PatternEditor : EditorWindow 
 {
     static int lenX = 2;
     static int lenY = 2;
@@ -348,7 +348,7 @@ public class PatternEditor : EditorWindow
                 return null;
         }
     }
-    public static Type[,] dataToPattern<Type>(string jsonText){
+    Type[,] dataToPattern<Type>(string jsonText){
         PatternData<Type> patternData = JsonUtility.FromJson<PatternData<Type>>(jsonText);
         int dataLenR = patternData.row.Length;
         int dataLenC = patternData.row[0].column.Length;
@@ -381,16 +381,16 @@ public class PatternEditor : EditorWindow
     }
 
     [System.Serializable]
-    public class PatternData<Type>{
+    class PatternData<Type>{
         public PatternType patternType;
         public PatternRow<Type>[] row; 
     }
     [System.Serializable]
-    public class PatternRow<Type>{
+    class PatternRow<Type>{
         public PatternColumn<Type>[] column;
     }
     [System.Serializable]
-    public class PatternColumn<Type>{
+    class PatternColumn<Type>{
         public Type value; 
     }
 
