@@ -48,7 +48,7 @@ public class PatternEditor : EditorWindow
     static bool focusAfterSave = false;
     Vector2 patternScrollPos;
 
-    [MenuItem("Window/Simple Pattern Editor")]
+    [MenuItem("Tools/Simple Pattern Editor")]
     public static void ShowWindow()
     {
         GetWindow<PatternEditor>("Pattern Editor");
